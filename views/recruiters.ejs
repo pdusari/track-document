@@ -1,0 +1,61 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">
+        <div class="card">
+          <div class="content">
+            <a href="/addrecruiter">
+              <div class="row">
+                  <div class="col-xs-2">
+                      <div class="icon-small icon-warning text-center">
+                          <i class="ti-plus"></i>
+                      </div>
+                  </div>
+                  <div class="col-xs-8">
+                      <div class="numbers">
+                          <p>Add Recruiter</p>
+                      </div>
+                  </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="header">
+                <h4 class="title">Striped Table</h4>
+                <p class="category">Here is a subtitle for this table</p>
+              </div>
+              <div class="content table-responsive table-full-width">
+                <table class="table table-striped">
+                  <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <% _.each(recruiters, function (v) { %>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                          <%= v.name %>
+                        </td>
+                        <td>
+                        <i class="ti-calendar"></i> <a href="/addrecruiter/<%= v.recruiterId %>" >Edit</a>  |
+                        <i class="ti-trash"></i> <a href="/delrecruiter/<%= v.recruiterId %>" >Delete</a> 
+                        </td>
+                      </tr>
+                      <% }); %>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
